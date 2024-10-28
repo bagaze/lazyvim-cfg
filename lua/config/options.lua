@@ -21,3 +21,6 @@ vim.wo.relativenumber = false
 
 -- Deactivate vim cursorline
 vim.g.cursorline = false
+
+-- For luarocks
+vim.fn.setenv("MACOSX_DEPLOYMENT_TARGET", "14.7")
