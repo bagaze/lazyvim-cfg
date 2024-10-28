@@ -10,3 +10,5 @@
 -- Global settings
 local opt = vim.opt
 opt.ignorecase = false
+
+vim.g.autoformat = false
