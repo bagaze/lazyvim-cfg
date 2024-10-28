@@ -9,6 +9,15 @@
 
 -- Global settings
 local opt = vim.opt
+
+-- Active case on search
 opt.ignorecase = false
 
+-- Autoformat on save
 vim.g.autoformat = false
+
+-- Relative line number
+vim.wo.relativenumber = false
+
+-- Deactivate vim cursorline
+vim.g.cursorline = false
