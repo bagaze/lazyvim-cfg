@@ -16,6 +16,7 @@ return {
       virtual_text_column = 1,
       schedule_event = "CursorHold",
       clear_event = "CursorHoldI",
+      delay = 150,
     },
     keys = {
       {
