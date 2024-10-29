@@ -10,6 +10,9 @@
 -- Global settings
 local opt = vim.opt
 
+-- No swapfile
+opt.swapfile = false
+
 -- Active case on search
 opt.ignorecase = false
 
