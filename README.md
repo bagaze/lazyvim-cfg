@@ -5,9 +5,9 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## Prerequisites
 
-nvim: `brew install nvim`
-ripgrep: `brew install ripgrep`
-*optional* - lazygit: `brew install lazygit`
+- nvim: `brew install nvim`
+- ripgrep: `brew install ripgrep`
+- *optional* - lazygit: `brew install jesseduffield/lazygit/lazygit`
 
 ## Install
 
@@ -15,7 +15,7 @@ ripgrep: `brew install ripgrep`
 git clone https://github.com/bagaze/lazyvim-cfg.git ~/.config/nvim
 ```
 
-## Configure luarocks
+### Configure luarocks
 
 ```bash
 mkdir -p ~/.local/share/nvim/lazy-rocks/hererocks/bin/
