@@ -11,20 +11,20 @@ return {
         bashls = {
           filetypes = { "sh", "zsh" },
         },
-        ruby_lsp = {
-          -- mason = false,
-          -- cmd = { "bundle", "exec", "ruby-lsp" },
-          -- init_options = {
-          --   formatter = "auto",
-          -- },
-        },
+        -- ruby_lsp = {
+        --   mason = false,
+        --   cmd = { "bundle", "exec", "ruby-lsp" },
+        --   init_options = {
+        --     formatter = "auto",
+        --   },
+        -- },
         -- See: https://docs.rubocop.org/rubocop/usage/lsp.html
         -- rubocop = {
         --   mason = false,
         --   cmd = { "bundle", "exec", "rubocop", "--lsp" },
         --   root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
         -- },
-        -- solargraph = {},
+        solargraph = {},
         -- sqlls = {},
         -- terraformls = {},
         -- tsserver = {},
