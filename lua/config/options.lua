@@ -13,6 +13,9 @@ local opt = vim.opt
 -- Active case on search
 opt.ignorecase = false
 
+-- Don't use the system clipboard by default
+-- opt.clipboard = "unnamedplus"
+
 -- Autoformat on save
 vim.g.autoformat = false
 
@@ -24,3 +27,9 @@ vim.g.cursorline = false
 
 -- For luarocks
 vim.fn.setenv("MACOSX_DEPLOYMENT_TARGET", "14.7")
+
+-- From: https://github.com/LazyVim/LazyVim/issues/2327#issuecomment-1882020758
+-- Don't sync clipboard with system
+opt.clipboard = ""
+-- Don't make popup menu transparent
+opt.pumblend = 0
