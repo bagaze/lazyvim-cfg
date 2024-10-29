@@ -14,6 +14,8 @@ return {
       message_template = " <author> • <date> • <<sha>>",
       date_format = "%r",
       virtual_text_column = 1,
+      schedule_event = "CursorHold",
+      clear_event = "CursorHoldI",
     },
     keys = {
       {
