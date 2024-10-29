@@ -41,6 +41,7 @@
   "onedarkpro.nvim": { "branch": "main", "commit": "b50de0e605081486bd5b9ab2d42832bacfc167e7" },
   "persistence.nvim": { "branch": "main", "commit": "f6aad7dde7fcf54148ccfc5f622c6d5badd0cc3d" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
+  "rainbow_csv.nvim": { "branch": "main", "commit": "7f3fddfe813641035fac2cdf94c2ff69bb0bf0b9" },
   "solarized.nvim": { "branch": "main", "commit": "f85f000c3e46714fee52cee3adf9f9661a048e40" },
   "sonokai": { "branch": "master", "commit": "3dcd97c0c5e4118bc171df6ba33800dfd9524a00" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b" },
