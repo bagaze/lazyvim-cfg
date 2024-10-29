@@ -23,7 +23,7 @@ opt.ignorecase = false
 vim.g.autoformat = false
 
 -- Relative line number
-vim.wo.relativenumber = false
+vim.wo.relativenumber = true
 
 -- Deactivate vim cursorline
 vim.g.cursorline = false
