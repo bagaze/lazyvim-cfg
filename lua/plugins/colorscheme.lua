@@ -5,6 +5,13 @@ return {
   { "ellisonleao/gruvbox.nvim" },
   { "olimorris/onedarkpro.nvim", priority = 100 },
   { "sainnhe/sonokai" },
+  {
+    "catppuccin/nvim",
+    priority = 1000,
+    opts = {
+      transparent_background = false,
+    },
+  },
 
   -- Configure LazyVim to load gruvbox
   {
