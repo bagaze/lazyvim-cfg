@@ -65,4 +65,15 @@ return {
       },
     },
   },
+  {
+    "akinsho/git-conflict.nvim",
+    version = "2",
+    config = true
+  },
+  {
+    "sindrets/diffview.nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons"
+    },
+  },
 }
