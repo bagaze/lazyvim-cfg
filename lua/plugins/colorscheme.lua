@@ -12,7 +12,7 @@ return {
       transparent_background = false,
     },
   },
-
+  { "EdenEast/nightfox.nvim" },
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
