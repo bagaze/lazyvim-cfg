@@ -83,6 +83,11 @@ return {
         desc = "open diffview",
       },
       {
+        "<leader>gdm",
+        "<cmd>DiffviewOpen origin/master<cr>",
+        desc = "open diffview with origin/master",
+      },
+      {
         "<leader>gdc",
         "<cmd>DiffviewClose<cr>",
         desc = "close diffview",
