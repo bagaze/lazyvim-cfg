@@ -62,6 +62,7 @@ return {
     opts = {
       spec = {
         { "<leader>gb", group = "git blame+" },
+        { "<leader>gd", group = "git diff+" },
       },
     },
   },
@@ -75,5 +76,17 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons"
     },
+    keys = {
+      {
+        "<leader>gdo",
+        "<cmd>DiffviewOpen<cr>",
+        desc = "open diffview",
+      },
+      {
+        "<leader>gdc",
+        "<cmd>DiffviewClose<cr>",
+        desc = "close diffview",
+      },
+    }
   },
 }
