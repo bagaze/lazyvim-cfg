@@ -7,8 +7,8 @@ return {
   { "olimorris/onedarkpro.nvim" },
   {
     "sainnhe/sonokai",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
   },
   { "tanvirtin/monokai.nvim" },
   { "Mofiqul/dracula.nvim" },
@@ -19,6 +19,8 @@ return {
   { "EdenEast/nightfox.nvim" },
   {
     "catppuccin/nvim",
+    lazy = false,
+    priority = 1000,
     -- priority = 1000,
     opts = {
       transparent_background = false,
@@ -28,7 +30,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "sonokai",
+      colorscheme = "catppuccin-frappe",
     },
   },
 }
