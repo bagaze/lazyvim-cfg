@@ -20,7 +20,14 @@ opt.ignorecase = false
 -- opt.clipboard = "unnamedplus"
 
 -- Autoformat on save
-vim.g.autoformat = false
+vim.g.autoformat = true
+-- Disable autoformat for ruby files
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+--   pattern = { "ruby" },
+--   callback = function()
+--     vim.b.autoformat = false
+--   end,
+-- })
 
 -- Relative line number
 vim.wo.relativenumber = true
