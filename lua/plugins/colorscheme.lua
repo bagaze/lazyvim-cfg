@@ -23,7 +23,7 @@ return {
     priority = 1000,
     -- priority = 1000,
     opts = {
-      transparent_background = false,
+      transparent_background = true,
     },
   },
   -- Default theme
