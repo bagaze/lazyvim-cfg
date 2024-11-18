@@ -16,7 +16,3 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Sav
 -- From: https://stackoverflow.com/a/59029500
 vim.keymap.set("n", "#", "#N")
 vim.keymap.set("n", "*", "*N")
-
--- Telescope
-local live_grep_args_shortcuts = require("telescope-live-grep-args.shortcuts")
-vim.keymap.set("v", "<leader>/", live_grep_args_shortcuts.grep_visual_selection, { desc = "grep visual selection" })

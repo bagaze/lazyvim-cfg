@@ -11,15 +11,28 @@ return {
     },
   },
   keys = {
-    -- {
-    --   "<leader>fg",
-    --   ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
-    --   desc = "Grep (Root dir - With args)",
-    -- },
+    -- Replace default with grep with args
     {
       "<leader>/",
-      ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+      "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+      mode = { "n" },
       desc = "Grep (Root dir - With args)",
+    },
+    -- Grep visually selected content
+    {
+      "<leader>/",
+      "<cmd>lua require('telescope-live-grep-args.shortcuts')"
+        .. ".grep_visual_selection({ postfix = '', trim = true, quote = false })<cr>",
+      mode = { "v" },
+      desc = "Grep (Visual selection)",
+    },
+    -- Grep under cursor
+    {
+      "<leader>fg",
+      "<cmd>lua require('telescope-live-grep-args.shortcuts')"
+        .. ".grep_word_under_cursor({ postfix = '', trim = true, quote = false })<cr>",
+      mode = { "n" },
+      desc = "Grep (Under cursor)",
     },
   },
   config = function()
