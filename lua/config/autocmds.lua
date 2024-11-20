@@ -2,7 +2,6 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
-
 -- Rubocop
 -- vim.opt.signcolumn = "yes"
 -- vim.api.nvim_create_autocmd("FileType", {
@@ -56,3 +55,28 @@
 -- end
 --
 -- lspconfig.ruby_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
+
+-- Disable spelling in markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "text" },
+  callback = function()
+    vim.opt_local.spell = false
+  end,
+})
+
+-- Disable autoformat for eruby (.erb) files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "eruby" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
+
+-- Copy last yanked text to clipboard on focusLost
+-- From: https://www.reddit.com/r/neovim/comments/1l4tubm/copy_last_yanked_text_to_clipboard_on_focuslost/
+-- vim.api.nvim_create_autocmd("FocusLost", {
+--   desc = "Copy to clipboard on FocusLost",
+--   callback = function()
+--     vim.fn.setreg("+", vim.fn.getreg("0"))
+--   end,
+-- })
