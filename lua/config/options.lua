@@ -4,8 +4,8 @@
 
 -- LSP Server to use for Ruby.
 -- Set to "solargraph" to use solargraph instead of ruby_lsp.
--- vim.g.lazyvim_ruby_lsp = "ruby_lsp"
--- vim.g.lazyvim_ruby_formatter = "rubocop"
+vim.g.lazyvim_ruby_lsp = "ruby_lsp"
+vim.g.lazyvim_ruby_formatter = "rubocop"
 
 -- Global settings
 local opt = vim.opt
@@ -21,13 +21,13 @@ opt.ignorecase = false
 
 -- Autoformat on save
 vim.g.autoformat = true
--- Disable autoformat for ruby files
--- vim.api.nvim_create_autocmd({ "FileType" }, {
---   pattern = { "ruby" },
---   callback = function()
---     vim.b.autoformat = false
---   end,
--- })
+-- Disable autoformat for eruby (.erb) files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "eruby" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
 
 -- Relative line number
 vim.wo.relativenumber = true
