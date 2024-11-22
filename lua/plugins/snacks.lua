@@ -4,7 +4,7 @@ return {
     terminal = {
       win = {
         -- can be set to "bottom", "top", "float"
-        -- position = "float",
+        position = "float",
       },
     },
   },
