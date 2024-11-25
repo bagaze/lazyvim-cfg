@@ -16,3 +16,8 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Sav
 -- From: https://stackoverflow.com/a/59029500
 vim.keymap.set("n", "#", "#N")
 vim.keymap.set("n", "*", "*N")
+
+-- Buffers
+vim.keymap.set("n", "<leader>ba", function()
+  Snacks.bufdelete.all()
+end, { desc = "Delete All Buffers" })
