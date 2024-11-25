@@ -12,7 +12,7 @@ return {
     },
     opts = {
       ui = {
-        max_height = 2, -- -1 means dynamic height
+        max_height = 10, -- -1 means dynamic height
         -- Where to place the ui window
         -- Can be any of "topleft", "bottomleft", "topright", "bottomright", "center", "cursor" (sets under the current cursor pos)
         position = "center",
