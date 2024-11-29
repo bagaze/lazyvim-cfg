@@ -76,6 +76,16 @@ return {
         mode = { "n" },
         desc = "Grep (Under cursor)",
       },
+      -- Restore previous session
+      {
+        "<leader>;",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.resume()
+        end,
+        mode = { "n" },
+        desc = "Resume previous telescope picker",
+      },
     },
   },
 }
