@@ -11,7 +11,7 @@ return {
     -- or lazy = false. One of both options will work.
     opts = {
       enabled = true,
-      message_template = " <author> • <date> • <<sha>>",
+      message_template = "  <author> • <date> • <summary> • <<sha>>",
       date_format = "%r",
       virtual_text_column = 1,
       schedule_event = "CursorHold",
@@ -69,12 +69,12 @@ return {
   {
     "akinsho/git-conflict.nvim",
     version = "*",
-    config = true
+    config = true,
   },
   {
     "sindrets/diffview.nvim",
     dependencies = {
-      "nvim-tree/nvim-web-devicons"
+      "nvim-tree/nvim-web-devicons",
     },
     keys = {
       {
@@ -92,6 +92,6 @@ return {
         "<cmd>DiffviewClose<cr>",
         desc = "close diffview",
       },
-    }
+    },
   },
 }
