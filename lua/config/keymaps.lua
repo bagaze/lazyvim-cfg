@@ -17,6 +17,11 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Sav
 vim.keymap.set("n", "#", "#N")
 vim.keymap.set("n", "*", "*N")
 
+-- Duplicate a line and comment out the first line
+vim.keymap.set("n", "yc", "yy<cmd>normal gcc<CR>p", { desc = "Duplicate line and comment" })
+
+vim.keymap.set("n", "<C-c>", "ciw")
+
 -- Buffers
 vim.keymap.set("n", "<leader>ba", function()
   Snacks.bufdelete.all()
