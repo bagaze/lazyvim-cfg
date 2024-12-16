@@ -7,6 +7,9 @@
 vim.g.lazyvim_ruby_lsp = "ruby_lsp"
 vim.g.lazyvim_ruby_formatter = "rubocop"
 
+-- Disable smooth scrolling
+vim.g.snacks_animate = false
+
 -- Global settings
 local opt = vim.opt
 
