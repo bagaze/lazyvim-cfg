@@ -6,14 +6,34 @@ return {
         fzf_opts = {
           ["--layout"] = "default",
         },
+        winopts = {
+          -- Only valid when using a float window
+          -- (i.e. when 'split' is not defined, default)
+          height = 0.90, -- window height
+          width = 0.90, -- window width
+          preview = {
+            delay = 0,
+            -- vertical = "down:45%", -- up|down:size
+            -- horizontal = "right:60%", -- right|left:size
+            horizontal = "right:65%",
+          },
+        },
+        defaults = {
+          -- file_icons = "mini",
+          -- copen        = "topleft copen",
+          no_header = true, -- hide grep|cwd header?
+        },
         files = {
           -- resume = true,
           -- cwd_prompt = true,
+          -- no_header = true, -- hide grep|cwd header?
+          -- no_header_i = false, -- hide interactive header?
         },
         grep = {
           rg_glob = true,
           glob_flag = "--iglob",
           glob_separator = "%s%-%-",
+          -- no_header = true,
           -- resume = true,
           -- cwd_prompt = true,
         },
