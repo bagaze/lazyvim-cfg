@@ -57,7 +57,7 @@ return {
       -- Restore previous session
       {
         "<leader>;",
-        "lua require('fzf-lua').resume()",
+        "<cmd>lua require('fzf-lua').resume()<cr>",
         mode = { "n" },
         desc = "Resume previous fzf picker",
       },
