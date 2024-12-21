@@ -4,26 +4,26 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
     opts = {
       styles = { transparency = true },
     },
   },
   {
     "catppuccin/nvim",
-    -- lazy = false,
-    -- priority = 900,
-    -- opts = {
-    --   transparent_background = true,
-    -- },
+    lazy = false,
+    priority = 900,
+    opts = {
+      transparent_background = true,
+    },
   },
   -- Default theme
   {
     "LazyVim/LazyVim",
     opts = {
-      -- colorscheme = "catppuccin-frappe",
-      colorscheme = "rose-pine-moon",
+      colorscheme = "catppuccin-frappe",
+      -- colorscheme = "rose-pine-moon",
     },
   },
 }
