@@ -35,3 +35,10 @@ end, { desc = "Delete All Buffers" })
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Delete to void
+vim.keymap.set({ "n", "v" }, "c", '"_c')
+vim.keymap.set({ "n", "v" }, "C", '"_C')
+vim.keymap.set({ "n", "v" }, "x", '"_x')
+vim.keymap.set({ "n", "v" }, "X", '"_X')
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete to void" })
