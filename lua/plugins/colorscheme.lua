@@ -10,6 +10,15 @@ return {
       styles = { transparency = true },
     },
   },
+  -- {
+  --   "philosofonusus/morta.nvim",
+  --   name = "morta",
+  --   lazy = false,
+  --   priority = 1001,
+  --   opts = {
+  --     transparent_background = true,
+  --   },
+  -- },
   {
     "catppuccin/nvim",
     name = "catppuccin",
@@ -25,6 +34,7 @@ return {
     opts = {
       -- colorscheme = "catppuccin-frappe",
       colorscheme = "rose-pine-moon",
+      -- colorscheme = "morta",
     },
   },
 }
