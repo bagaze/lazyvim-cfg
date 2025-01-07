@@ -15,6 +15,7 @@ vim.keymap.set({ "i", "x", "n", "s" }, "<D-w>", function()
 end, { desc = "Close Buffer" })
 -- Global
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy line to system clipboard" })
 
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-p>", ":Telescope find_files<ESC>", { desc = "Find files" })
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
@@ -25,6 +26,7 @@ vim.keymap.set("n", "*", "*N")
 -- Duplicate a line and comment out the first line
 vim.keymap.set("n", "yc", "yy<cmd>normal gcc<CR>p", { desc = "Duplicate line and comment" })
 
+-- greatest remap ever
 vim.keymap.set("n", "<C-c>", "ciw")
 
 -- Buffers
@@ -35,6 +37,8 @@ end, { desc = "Delete All Buffers" })
 -- Navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- Delete to void
 vim.keymap.set({ "n", "v" }, "c", '"_c')
@@ -42,3 +46,5 @@ vim.keymap.set({ "n", "v" }, "C", '"_C')
 vim.keymap.set({ "n", "v" }, "x", '"_x')
 vim.keymap.set({ "n", "v" }, "X", '"_X')
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete to void" })
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Replace to void" })
