@@ -39,6 +39,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+-- -- In insert mode
+vim.keymap.set("i", "<C-h>", "<Esc>I")
+vim.keymap.set("i", "<C-l>", "<Esc>A")
 
 -- Delete to void
 vim.keymap.set({ "n", "v" }, "c", '"_c')
