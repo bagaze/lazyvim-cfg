@@ -45,6 +45,10 @@ return {
         -- cwd_prompt = true,
         -- no_header = true, -- hide grep|cwd header?
         -- no_header_i = false, -- hide interactive header?
+        previewer = false,
+        winopts = {
+          width = 0.4,
+        },
       },
       grep = {
         rg_glob = true,
