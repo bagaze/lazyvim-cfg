@@ -7,5 +7,37 @@ return {
         position = "float",
       },
     },
+    picker = {
+      ---@class snacks.picker.formatters.Config
+      formatters = {
+        file = {
+          filename_first = true, -- display filename before the file path
+        },
+      },
+      sources = {
+        files = {
+          layout = {
+            preset = "vscode",
+          },
+        },
+      },
+      layout = {
+        cycle = true,
+        --- Use the default layout or vertical if the window is too narrow
+        preset = function()
+          return vim.o.columns >= 120 and "default" or "vertical"
+        end,
+      },
+    },
+  },
+  keys = {
+    -- Restore previous session
+    {
+      "<leader>;",
+      function()
+        Snacks.picker.resume()
+      end,
+      desc = "Resume previous picker",
+    },
   },
 }
