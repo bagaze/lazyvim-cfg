@@ -88,6 +88,16 @@ return {
         desc = "open diffview with origin/master",
       },
       {
+        "<leader>gdb",
+        "<cmd>DiffviewOpen origin/HEAD...HEAD --imply-local<cr>",
+        desc = "open diffview with base branch",
+      },
+      {
+        "<leader>gdf",
+        "<cmd>DiffviewFileHistory --range=origin/HEAD...HEAD --right-only --no-merges<cr>",
+        desc = "compare individual commits",
+      },
+      {
         "<leader>gdc",
         "<cmd>DiffviewClose<cr>",
         desc = "close diffview",
