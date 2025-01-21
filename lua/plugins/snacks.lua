@@ -20,6 +20,11 @@ return {
             preset = "vscode",
           },
         },
+        smart = {
+          layout = {
+            preset = "vscode",
+          },
+        },
       },
       layout = {
         cycle = true,
@@ -38,6 +43,13 @@ return {
         Snacks.picker.resume()
       end,
       desc = "Resume previous picker",
+    },
+    {
+      "<leader><leader>",
+      function()
+        Snacks.picker.smart()
+      end,
+      desc = "Find files (Smart)",
     },
   },
 }
