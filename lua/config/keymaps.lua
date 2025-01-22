@@ -20,8 +20,8 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy line to system clipboar
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-p>", ":Telescope find_files<ESC>", { desc = "Find files" })
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 -- From: https://stackoverflow.com/a/59029500
-vim.keymap.set("n", "#", "#N")
-vim.keymap.set("n", "*", "*N")
+vim.keymap.set("n", "#", "#Nzz")
+vim.keymap.set("n", "*", "*Nzz")
 
 -- Duplicate a line and comment out the first line
 vim.keymap.set("n", "yc", "yy<cmd>normal gcc<CR>p", { desc = "Duplicate line and comment" })
