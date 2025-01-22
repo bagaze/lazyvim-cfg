@@ -28,6 +28,7 @@ vim.keymap.set("n", "yc", "yy<cmd>normal gcc<CR>p", { desc = "Duplicate line and
 
 -- greatest remap ever
 vim.keymap.set("n", "<C-c>", "ciw")
+vim.keymap.set("n", "<C-x>", "viw")
 
 -- Buffers
 vim.keymap.set("n", "<leader>ba", function()
