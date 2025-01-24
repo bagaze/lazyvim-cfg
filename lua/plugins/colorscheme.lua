@@ -6,9 +6,15 @@ return {
     name = "rose-pine",
     lazy = false,
     priority = 1000,
-    opts = {
-      styles = { transparency = true },
-    },
+    opts = function()
+      local palette = require("rose-pine.palette")
+      return {
+        styles = { transparency = true },
+        highlight_groups = {
+          Visual = { fg = "#FF5DA9", bg = palette.base },
+        },
+      }
+    end,
   },
   -- {
   --   "philosofonusus/morta.nvim",
