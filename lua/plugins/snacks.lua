@@ -25,6 +25,9 @@ return {
             preset = "vscode",
           },
         },
+        explorer = {
+          hidden = true,
+        },
       },
       layout = {
         cycle = true,
