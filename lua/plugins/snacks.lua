@@ -1,3 +1,10 @@
+local layouts = require("snacks.picker.config.layouts")
+
+layouts.custom = vim.tbl_deep_extend("keep", { layout = { height = 0.95, width = 0.95 } }, layouts.default)
+layouts.custom.layout[2].width = 0.6
+
+layouts.vscode_custom = vim.tbl_deep_extend("keep", { layout = { width = 0.60 } }, layouts.vscode)
+
 return {
   "folke/snacks.nvim",
   opts = {
@@ -5,6 +12,12 @@ return {
       win = {
         -- can be set to "bottom", "top", "float"
         position = "float",
+      },
+    },
+    styles = {
+      lazygit = {
+        width = 0.96,
+        height = 0.95,
       },
     },
     picker = {
@@ -18,23 +31,29 @@ return {
       sources = {
         files = {
           layout = {
-            preset = "vscode",
+            preset = "vscode_custom",
           },
         },
         smart = {
           layout = {
-            preset = "vscode",
+            preset = "vscode_custom",
           },
         },
         explorer = {
           hidden = true,
+        },
+        lsp_symbols = {
+          layout = {
+            preset = "vscode",
+            preview = "main",
+          },
         },
       },
       layout = {
         cycle = true,
         --- Use the default layout or vertical if the window is too narrow
         preset = function()
-          return vim.o.columns >= 120 and "default" or "vertical"
+          return vim.o.columns >= 120 and "custom" or "vertical"
         end,
       },
     },
