@@ -48,6 +48,12 @@ return {
             preview = "main",
           },
         },
+        treesitter = {
+          layout = {
+            preset = "vscode",
+            preview = "main",
+          },
+        },
       },
       layout = {
         cycle = true,
@@ -73,6 +79,13 @@ return {
         Snacks.picker.smart()
       end,
       desc = "Find files (Smart)",
+    },
+    {
+      "<leader>gr",
+      function()
+        Snacks.picker.git_branches()
+      end,
+      desc = "Git branches",
     },
   },
 }

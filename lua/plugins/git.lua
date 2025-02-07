@@ -20,37 +20,37 @@ return {
     },
     keys = {
       {
-        "<leader>gbu",
+        "<leader>gtu",
         "<cmd>GitBlameToggle<cr>",
         desc = "toggle git blame",
       },
       {
-        "<leader>gbe",
+        "<leader>gte",
         "<cmd>GitBlameEnable<cr>",
         desc = "enable git blame",
       },
       {
-        "<leader>gbd",
+        "<leader>gtd",
         "<cmd>GitBlameDisable<cr>",
         desc = "disable git blame",
       },
       {
-        "<leader>gbh",
+        "<leader>gth",
         "<cmd>GitBlameCopySHA<cr>",
         desc = "copy line commit SHA",
       },
       {
-        "<leader>gbl",
+        "<leader>gtl",
         "<cmd>GitBlameCopyCommitURL<cr>",
         desc = "copy line commit URL",
       },
       {
-        "<leader>gbo",
+        "<leader>gto",
         "<cmd>GitBlameOpenCommitURL<cr>",
         desc = "opens commit in default browser",
       },
       {
-        "<leader>gbc",
+        "<leader>gtc",
         "<cmd>GitBlameCopyFileURL<cr>",
         desc = "copy file url to clipboard",
       },
@@ -61,8 +61,8 @@ return {
     -- default show git blame when open git files
     opts = {
       spec = {
-        { "<leader>gb", group = "git blame+" },
-        { "<leader>gd", group = "git diff+" },
+        { "<leader>gt", group = "git blame+" },
+        { "<leader>gD", group = "git diff+" },
       },
     },
   },
@@ -78,27 +78,27 @@ return {
     },
     keys = {
       {
-        "<leader>gdo",
+        "<leader>gDo",
         "<cmd>DiffviewOpen<cr>",
         desc = "open diffview",
       },
       {
-        "<leader>gdm",
+        "<leader>gDm",
         "<cmd>DiffviewOpen origin/master<cr>",
         desc = "open diffview with origin/master",
       },
       {
-        "<leader>gdb",
+        "<leader>gDb",
         "<cmd>DiffviewOpen origin/HEAD...HEAD --imply-local<cr>",
         desc = "open diffview with base branch",
       },
       {
-        "<leader>gdf",
+        "<leader>gDf",
         "<cmd>DiffviewFileHistory --range=origin/HEAD...HEAD --right-only --no-merges<cr>",
         desc = "compare individual commits",
       },
       {
-        "<leader>gdc",
+        "<leader>gDc",
         "<cmd>DiffviewClose<cr>",
         desc = "close diffview",
       },
