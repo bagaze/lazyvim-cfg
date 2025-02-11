@@ -36,10 +36,26 @@ vim.keymap.set("n", "<leader>ba", function()
 end, { desc = "Delete All Buffers" })
 
 -- Navigation
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+--- From: https://github.com/folke/snacks.nvim/discussions/1030#discussioncomment-12109404
+vim.keymap.set("n", "<C-d>", function()
+  vim.wo.scrolloff = 999
+  vim.defer_fn(function()
+    vim.wo.scrolloff = 8
+  end, 500)
+  return "<c-d>"
+end, { expr = true })
+
+vim.keymap.set("n", "<C-u>", function()
+  vim.wo.scrolloff = 999
+  vim.defer_fn(function()
+    vim.wo.scrolloff = 8
+  end, 500)
+  return "<c-u>"
+end, { expr = true })
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "{", "{zz")
+vim.keymap.set("n", "}", "}zz")
 -- -- In insert mode
 vim.keymap.set("i", "<C-h>", "<Esc>I")
 vim.keymap.set("i", "<C-l>", "<Esc>A")
