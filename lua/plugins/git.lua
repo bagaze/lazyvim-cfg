@@ -62,7 +62,7 @@ return {
     opts = {
       spec = {
         { "<leader>gt", group = "git blame+" },
-        { "<leader>gD", group = "git diff+" },
+        { "<leader>gi", group = "git diff+" },
       },
     },
   },
@@ -78,27 +78,27 @@ return {
     },
     keys = {
       {
-        "<leader>gDo",
+        "<leader>gio",
         "<cmd>DiffviewOpen<cr>",
         desc = "open diffview",
       },
       {
-        "<leader>gDm",
+        "<leader>gim",
         "<cmd>DiffviewOpen origin/master<cr>",
         desc = "open diffview with origin/master",
       },
       {
-        "<leader>gDb",
+        "<leader>gib",
         "<cmd>DiffviewOpen origin/HEAD...HEAD --imply-local<cr>",
         desc = "open diffview with base branch",
       },
       {
-        "<leader>gDf",
+        "<leader>gif",
         "<cmd>DiffviewFileHistory --range=origin/HEAD...HEAD --right-only --no-merges<cr>",
         desc = "compare individual commits",
       },
       {
-        "<leader>gDc",
+        "<leader>gic",
         "<cmd>DiffviewClose<cr>",
         desc = "close diffview",
       },

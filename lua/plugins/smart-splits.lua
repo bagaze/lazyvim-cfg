@@ -3,6 +3,12 @@ return {
     "mrjones2014/smart-splits.nvim",
     lazy = false,
     -- build = "./kitty/install-kittens.bash",
+    opts = {
+      -- 'wrap' => Wrap to opposite side - not supported on Kitty
+      -- 'split' => Create a new split in the desired direction
+      -- 'stop' => Do nothing
+      at_edge = "stop",
+    },
     keys = {
       {
         "<C-h>",
