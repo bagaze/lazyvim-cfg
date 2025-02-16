@@ -65,6 +65,8 @@ return {
     },
   },
   keys = {
+    -- Deactivate lsp_symbols
+    -- { "<leader>ss", false },
     -- Restore previous session
     {
       "<leader>;",
