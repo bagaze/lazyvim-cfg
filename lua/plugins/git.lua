@@ -104,4 +104,44 @@ return {
       },
     },
   },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
+
+      -- Only one of these is needed.
+      -- "nvim-telescope/telescope.nvim", -- optional
+      -- "ibhagwan/fzf-lua",              -- optional
+      "echasnovski/mini.pick", -- optional
+    },
+    config = true,
+    opts = {
+      mappings = {
+        commit_editor = {
+          ["<c-s><c-s>"] = "Submit",
+          ["<c-s><c-k>"] = "Abort",
+        },
+        commit_editor_I = {
+          ["<c-s><c-s>"] = "Submit",
+          ["<c-s><c-k>"] = "Abort",
+        },
+        rebase_editor = {
+          ["<c-s><c-s>"] = "Submit",
+          ["<c-s><c-k>"] = "Abort",
+        },
+        rebase_editor_I = {
+          ["<c-s><c-s>"] = "Submit",
+          ["<c-s><c-k>"] = "Abort",
+        },
+      },
+    },
+    keys = {
+      {
+        "<leader>gn",
+        "<cmd>Neogit<cr>",
+        desc = "open neogit",
+      },
+    },
+  },
 }
