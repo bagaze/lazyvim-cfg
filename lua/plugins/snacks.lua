@@ -41,6 +41,15 @@ return {
         },
         explorer = {
           hidden = true,
+          win = {
+            list = {
+              keys = {
+                ["<Esc>"] = function()
+                  --Do nothing
+                end,
+              },
+            },
+          },
         },
         lsp_symbols = {
           layout = {
