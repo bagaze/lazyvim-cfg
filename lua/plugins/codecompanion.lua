@@ -1,6 +1,7 @@
 return {
   {
     "olimorris/codecompanion.nvim",
+    version = "*", -- use latest release instead of latest commit
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
