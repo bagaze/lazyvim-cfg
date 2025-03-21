@@ -8,7 +8,7 @@
   "catppuccin": { "branch": "main", "commit": "5b5e3aef9ad7af84f463d17b5479f06b87d5c429" },
   "codecompanion.nvim": { "branch": "main", "commit": "95680637c4e1605826544a96478e26bc96687ad2" },
   "conform.nvim": { "branch": "master", "commit": "f9ef25a7ef00267b7d13bfc00b0dea22d78702d5" },
-  "copilot.lua": { "branch": "gpt4o", "commit": "827f1a1409cadf435f58b268f9791e9e37f535f0" },
+  "copilot.lua": { "branch": "master", "commit": "de1308f5892f04f991f2f4aaa764a4eb6e6c55f3" },
   "csvview.nvim": { "branch": "main", "commit": "02edaf830c2225ec39b889173f09cbbf89da3b87" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "dracula.nvim": { "branch": "main", "commit": "96c9d19ce81b26053055ad6f688277d655b3f7d2" },
