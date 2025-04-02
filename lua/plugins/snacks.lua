@@ -85,7 +85,7 @@ return {
       desc = "Resume previous picker",
     },
     {
-      "<leader><leader>",
+      "<leader>fs",
       function()
         Snacks.picker.smart()
       end,
