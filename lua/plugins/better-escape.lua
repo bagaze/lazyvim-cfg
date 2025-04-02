@@ -10,6 +10,7 @@ return {
           i = {
             j = {
               -- These can all also be functions
+              j = "<Esc>",
               k = "<Esc>",
             },
           },
