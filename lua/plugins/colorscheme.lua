@@ -8,7 +8,7 @@ return {
     priority = 1000,
     opts = function()
       return {
-        styles = { transparency = true },
+        -- styles = { transparency = true },
         highlight_groups = {
           Visual = { fg = "#FF5DA9", bg = "#FFFFFF" },
         },
