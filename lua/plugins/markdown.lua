@@ -26,4 +26,16 @@ return {
       file_types = { "markdown", "quarto", "Avante" },
     },
   },
+  {
+    "jakewvincent/mkdnflow.nvim",
+    -- See: https://github.com/jakewvincent/mkdnflow.nvim?tab=readme-ov-file#%EF%B8%8F-configuration
+    config = {
+      mappings = {
+        MkdnEnter = false,
+        MkdnGoBack = false,
+        MkdnGoForward = false,
+        MkdnToggleToDo = { { "n", "v" }, "<M-x>" },
+      },
+    },
+  },
 }

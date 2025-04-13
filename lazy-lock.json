@@ -38,6 +38,7 @@
   "mini.pairs": { "branch": "main", "commit": "69864a2efb36c030877421634487fd90db1e4298" },
   "mini.pick": { "branch": "main", "commit": "6cad781797f3a9b0e69f2e9a2d63de8b1c1824f5" },
   "mini.surround": { "branch": "main", "commit": "5aab42fcdcf31fa010f012771eda5631c077840a" },
+  "mkdnflow.nvim": { "branch": "main", "commit": "d459bd7ce68910272038ed037c028180161fd14d" },
   "neogit": { "branch": "master", "commit": "97f83f1dc51dee41e08e3c7a8adf00e1083e3178" },
   "neominimap.nvim": { "branch": "main", "commit": "0c0709557a5347ff7937c01b7ecab714330d3ddd" },
   "neotest": { "branch": "master", "commit": "dddbe8fe358b05b2b7e54fe4faab50563171a76d" },
