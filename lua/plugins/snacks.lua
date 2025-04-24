@@ -22,6 +22,9 @@ return {
     },
     picker = {
       ---@class snacks.picker.formatters.Config
+      exclude = { -- add folder names here to exclude
+        "node_modules",
+      },
       formatters = {
         file = {
           filename_first = true, -- display filename before the file path
