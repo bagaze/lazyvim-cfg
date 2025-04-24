@@ -69,3 +69,12 @@ vim.keymap.set({ "n", "v" }, "X", '"_X')
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete to void" })
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Replace to void" })
+
+-- make j and k movements with multiple save to jumplist
+vim.keymap.set("n", "k", function()
+  return vim.v.count > 0 and "m'" .. vim.v.count .. "k" or "gk"
+end, { expr = true })
+
+vim.keymap.set("n", "j", function()
+  return vim.v.count > 0 and "m'" .. vim.v.count .. "j" or "gj"
+end, { expr = true })
