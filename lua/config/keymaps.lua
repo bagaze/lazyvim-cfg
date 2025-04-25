@@ -18,7 +18,6 @@ vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to system clipbo
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy line to system clipboard" })
 vim.keymap.set({ "v" }, "p", '"P', { desc = "Paste without updating register" })
 
-vim.keymap.set({ "i", "x", "n", "s" }, "<D-p>", ":Telescope find_files<ESC>", { desc = "Find files" })
 vim.keymap.set({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 -- From: https://stackoverflow.com/a/59029500
 vim.keymap.set("n", "#", "#Nzz")
@@ -37,22 +36,24 @@ vim.keymap.set("n", "<leader>ba", function()
 end, { desc = "Delete All Buffers" })
 
 -- Navigation
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 --- From: https://github.com/folke/snacks.nvim/discussions/1030#discussioncomment-12109404
-vim.keymap.set("n", "<C-d>", function()
-  vim.wo.scrolloff = 999
-  vim.defer_fn(function()
-    vim.wo.scrolloff = 8
-  end, 500)
-  return "<c-d>"
-end, { expr = true })
-
-vim.keymap.set("n", "<C-u>", function()
-  vim.wo.scrolloff = 999
-  vim.defer_fn(function()
-    vim.wo.scrolloff = 8
-  end, 500)
-  return "<c-u>"
-end, { expr = true })
+-- vim.keymap.set("n", "<C-d>", function()
+--   vim.wo.scrolloff = 999
+--   vim.defer_fn(function()
+--     vim.wo.scrolloff = 8
+--   end, 500)
+--   return "<c-d>"
+-- end, { expr = true })
+--
+-- vim.keymap.set("n", "<C-u>", function()
+--   vim.wo.scrolloff = 999
+--   vim.defer_fn(function()
+--     vim.wo.scrolloff = 8
+--   end, 500)
+--   return "<c-u>"
+-- end, { expr = true })
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "{", "{zz")
@@ -78,3 +79,14 @@ end, { expr = true })
 vim.keymap.set("n", "j", function()
   return vim.v.count > 0 and "m'" .. vim.v.count .. "j" or "gj"
 end, { expr = true })
+
+-- use <C-L> in insert mode to jump to end of current treesitter node
+-- vim.keymap.set("i", "<C-l>", function()
+--   local node = vim.treesitter.get_node()
+--   if node ~= nil then
+--     local row, col = node:end_()
+--     pcall(vim.api.nvim_win_set_cursor, 0, { row + 1, col })
+--   end
+-- end, { desc = "insjump" })
+vim.keymap.set({ "n", "v" }, "gh", "^", { desc = "Move to beginning" })
+vim.keymap.set({ "n", "v" }, "gl", "$", { desc = "Move to end" })
