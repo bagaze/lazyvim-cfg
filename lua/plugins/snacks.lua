@@ -101,5 +101,12 @@ return {
       end,
       desc = "Git branches",
     },
+    {
+      "<leader>gdd",
+      function()
+        Snacks.picker.git_diff()
+      end,
+      desc = "Git Diff (Hunks)",
+    },
   },
 }
