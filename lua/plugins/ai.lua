@@ -16,19 +16,20 @@ return {
     -- full config: https://github.com/yetone/avante.nvim/blob/main/lua/avante/config.lua
     -- cfg inspired by: https://github.com/gokhangeyik/dotfiles/blob/main/nvim/lua/plugins/avante.lua
     opts = {
+      ---@alias Mode "agentic" | "legacy"
+      mode = "legacy",
+      ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
+      provider = "cp_o3_mini",
+      cursor_applying_provider = nil,
+      auto_suggestions_provider = nil,
       behaviour = {
         auto_suggestions = false,
-        -- From: https://github.com/yetone/avante.nvim/blob/main/cursor-planning-mode.md
-        enable_cursor_planning_mode = false,
       },
       windows = {
         ask = {
           start_insert = false,
         },
       },
-      provider = "copilot",
-      cursor_applying_provider = "cp_o3_mini",
-      auto_suggestions_provider = "cp_o3_mini",
       copilot = {
         endpoint = "https://api.githubcopilot.com",
         proxy = nil, -- [protocol://]host[:port] Use this proxy
