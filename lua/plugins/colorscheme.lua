@@ -58,6 +58,7 @@ return {
       overrides = function(colors)
         return {
           Visual = { fg = colors.red, bg = colors.highlight_low },
+          VisualNonText = { fg = colors.nontext, bg = colors.highlight_low },
           RenderMarkdownH1Bg = { fg = colors.green, bg = colors.bg },
           RenderMarkdownH4Bg = { fg = colors.pink, bg = colors.bg },
           RenderMarkdownH5Bg = { fg = colors.purple, bg = colors.bg },
