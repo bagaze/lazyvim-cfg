@@ -10,7 +10,8 @@ return {
   },
   {
     "yetone/avante.nvim",
-    event = "VeryLazy",
+    -- event = "VeryLazy",
+    cmd = { "AvanteToggle" },
     lazy = true,
     version = false, -- set this if you want to always pull the latest change
     -- full config: https://github.com/yetone/avante.nvim/blob/main/lua/avante/config.lua
@@ -159,6 +160,7 @@ return {
         desc = "avante: clear",
         mode = { "n", "v" },
       },
+      { "<leader>at", "<Cmd>AvanteToggle<CR>", desc = "avante: toggle" },
     },
   },
   -- {

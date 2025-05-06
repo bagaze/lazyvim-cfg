@@ -73,16 +73,17 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    lazy = false,
-    priority = 1000,
-    opts = function()
-      return {
-        -- styles = { transparency = true },
-        highlight_groups = {
-          Visual = { fg = "#FF5DA9", bg = "#FFFFFF" },
-        },
-      }
-    end,
+    lazy = true,
+    -- lazy = false,
+    -- priority = 1000,
+    -- opts = function()
+    --   return {
+    --     -- styles = { transparency = true },
+    --     highlight_groups = {
+    --       Visual = { fg = "#FF5DA9", bg = "#FFFFFF" },
+    --     },
+    --   }
+    -- end,
   },
   {
     "catppuccin/nvim",
