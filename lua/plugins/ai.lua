@@ -20,9 +20,9 @@ return {
       ---@alias Mode "agentic" | "legacy"
       mode = "legacy",
       ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-      provider = "cp_o3_mini",
-      cursor_applying_provider = nil,
-      auto_suggestions_provider = nil,
+      provider = "cp_gpt41",
+      cursor_applying_provider = "cp_gpt41",
+      auto_suggestions_provider = "cp_gpt41",
       behaviour = {
         auto_suggestions = false,
       },
@@ -50,6 +50,13 @@ return {
         --   temperature = 0,
         --   -- max_tokens = 8192,
         -- },
+        cp_gpt41 = {
+          __inherited_from = "copilot",
+          model = "gpt-4.1",
+          timeout = 30000, -- Timeout in milliseconds
+          temperature = 0,
+          -- max_tokens = 8192,
+        },
         cp_claude_35 = {
           __inherited_from = "copilot",
           model = "claude-3.5-sonnet",
