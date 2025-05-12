@@ -8,6 +8,9 @@ return {
       -- 'split' => Create a new split in the desired direction
       -- 'stop' => Do nothing
       at_edge = "stop",
+      -- disable multiplexer navigation if current multiplexer pane is zoomed
+      -- default: true
+      disable_multiplexer_nav_when_zoomed = false,
     },
     keys = {
       {
