@@ -5,6 +5,9 @@ return {
       windows = {
         preview = false,
       },
+      -- mappings = {
+      --   synchronize = "w",
+      -- },
     },
   },
 }
