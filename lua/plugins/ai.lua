@@ -71,6 +71,13 @@ return {
           temperature = 0,
           -- max_tokens = 8192,
         },
+        cp_claude_4 = {
+          __inherited_from = "copilot",
+          model = "claude-sonnet-4",
+          timeout = 30000, -- Timeout in milliseconds
+          temperature = 0,
+          -- max_tokens = 8192,
+        },
         cp_claude_37_thinking = {
           __inherited_from = "copilot",
           model = "claude-3.7-sonnet-thought",
