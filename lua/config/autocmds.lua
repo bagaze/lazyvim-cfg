@@ -56,9 +56,28 @@
 --
 -- lspconfig.ruby_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
 
+-- Disable spelling in markdown files
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "text" },
   callback = function()
     vim.opt_local.spell = false
   end,
+})
+
+-- NeoGit
+-- From: https://github.com/NeogitOrg/neogit/issues/1642#issuecomment-2595541169
+vim.api.nvim_create_autocmd("User", {
+  pattern = "NeogitStatusRefreshed",
+  callback = function()
+    vim.cmd("set autoread | checktime")
+  end,
+})
+-- From: https://github.com/NeogitOrg/neogit/issues/1682#issuecomment-2722983386
+local neogit = require("neogit")
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = "NeogitStatus",
+  callback = function()
+    neogit.dispatch_refresh()
+  end,
+  group = neogit.autocmd_group,
 })
