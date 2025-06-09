@@ -17,6 +17,7 @@ return {
         highlight_low = "#4A4B54",
         highlight_med = "#403d52",
         dark_pink = "#FF5DA9",
+        dark_orange = "#FF4D00",
       },
       -- miss dracula from: https://github.com/MariaSolOs/dotfiles/blob/main/.config/nvim/colors/miss-dracula.lua
       -- colors = {
@@ -76,6 +77,7 @@ return {
           ["@keyword.operator"] = { fg = colors.pink, italic = true },
           ["@keyword.exception"] = { fg = colors.purple, italic = true },
           ["@keyword.include"] = { fg = colors.pink, italic = true },
+          CursorLineNr = { fg = colors.dark_orange, bold = true },
         }
       end,
     },
