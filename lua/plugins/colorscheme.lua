@@ -2,8 +2,8 @@ return {
   -- Themes
   {
     "Mofiqul/dracula.nvim",
-    lazy = false,
-    priority = 1001,
+    lazy = true,
+    -- priority = 1001,
     opts = {
       italic_comment = true,
       -- Ref: https://github.com/Mofiqul/dracula.nvim/blob/main/lua/dracula/palette.lua
@@ -100,10 +100,33 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    lazy = true,
     -- lazy = false,
     -- priority = 900,
     opts = {
       transparent_background = true,
+    },
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "moon",
+      on_colors = function(colors)
+        colors.comment = "#5872a4"
+      end,
+      on_highlights = function(hl, colors)
+        hl.LineNr = { fg = colors.orange, bold = true }
+        hl.CursorLineNr = { fg = colors.green, bold = true }
+        hl.LineNrAbove = { fg = colors.orange }
+        hl.LineNrBelow = { fg = colors.orange }
+        hl.Visual = { fg = colors.red, bg = colors.highlight_low }
+        hl.VisualNonText = { fg = colors.nontext, bg = colors.highlight_low }
+        hl.comment = { fg = colors.comment }
+        hl.perlComment = { fg = colors.comment }
+        hl.Comment = { fg = colors.comment }
+      end,
     },
   },
   -- Default theme
@@ -112,7 +135,7 @@ return {
     opts = {
       -- colorscheme = "catppuccin-frappe",
       -- colorscheme = "rose-pine-moon",
-      colorscheme = "dracula",
+      colorscheme = "tokyonight",
     },
   },
 }
