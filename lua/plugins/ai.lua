@@ -20,9 +20,9 @@ return {
       ---@alias Mode "agentic" | "legacy"
       mode = "legacy",
       ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-      provider = "cp_gpt41",
-      cursor_applying_provider = "cp_gpt41",
-      auto_suggestions_provider = "cp_gpt41",
+      provider = "cp_claude_4",
+      cursor_applying_provider = "cp_claude_4",
+      auto_suggestions_provider = "cp_claude_4",
       behaviour = {
         auto_suggestions = false,
       },
