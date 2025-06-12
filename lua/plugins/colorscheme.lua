@@ -113,6 +113,7 @@ return {
     priority = 1000,
     opts = {
       style = "moon",
+      transparent = false, -- Enable this to disable setting the background color
       on_colors = function(colors)
         colors.comment = "#5872a4"
       end,
@@ -127,6 +128,11 @@ return {
         hl.perlComment = { fg = colors.comment }
         hl.Comment = { fg = colors.comment }
       end,
+      styles = {
+        -- Background styles. Can be "dark", "transparent" or "normal"
+        sidebars = "normal", -- style for sidebars, see below
+        floats = "normal", -- style for floating windows
+      },
     },
   },
   -- Default theme
