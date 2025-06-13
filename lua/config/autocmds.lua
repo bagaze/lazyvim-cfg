@@ -96,4 +96,11 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     neogit.dispatch_refresh()
   end,
   group = neogit.autocmd_group,
+-- Copy last yanked text to clipboard on focusLost
+-- From: https://www.reddit.com/r/neovim/comments/1l4tubm/copy_last_yanked_text_to_clipboard_on_focuslost/
+vim.api.nvim_create_autocmd("FocusLost", {
+  desc = "Copy to clipboard on FocusLost",
+  callback = function()
+    vim.fn.setreg("+", vim.fn.getreg("0"))
+  end,
 })
