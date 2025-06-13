@@ -63,3 +63,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = false
   end,
 })
+
+-- Copy last yanked text to clipboard on focusLost
+-- From: https://www.reddit.com/r/neovim/comments/1l4tubm/copy_last_yanked_text_to_clipboard_on_focuslost/
+vim.api.nvim_create_autocmd("FocusLost", {
+  desc = "Copy to clipboard on FocusLost",
+  callback = function()
+    vim.fn.setreg("+", vim.fn.getreg("0"))
+  end,
+})
