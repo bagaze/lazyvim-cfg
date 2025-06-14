@@ -75,6 +75,24 @@ return {
         end,
       },
     },
+    -- From: https://github.com/folke/snacks.nvim/discussions/207#discussioncomment-13463303
+    scratch = {
+      win = {
+        keys = {
+          ["delete"] = {
+            "X",
+            function(self)
+              vim.api.nvim_win_call(self.win, function()
+                vim.cmd([[close]])
+                os.remove(vim.api.nvim_buf_get_name(self.buf))
+              end)
+            end,
+            desc = "Delete buffer",
+            mode = { "n", "x" },
+          },
+        },
+      },
+    },
   },
   keys = {
     -- Deactivate lsp_symbols
