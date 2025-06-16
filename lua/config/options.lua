@@ -67,3 +67,7 @@ opt.pumblend = 0
 --     vim.cmd("highlight LineNr4 guifg=#5a5a5a")
 --   end,
 -- })
+
+-- From: https://github.com/LazyVim/LazyVim/discussions/2150#discussioncomment-7787591
+-- force root_dir to be remain cwd
+vim.g.root_spec = { "cwd" }
