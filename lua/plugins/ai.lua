@@ -10,9 +10,9 @@ return {
   },
   {
     "yetone/avante.nvim",
-    -- event = "VeryLazy",
-    cmd = { "AvanteToggle" },
-    lazy = true,
+    event = "VeryLazy",
+    -- cmd = { "AvanteToggle" },
+    -- lazy = true,
     version = false, -- set this if you want to always pull the latest change
     -- full config: https://github.com/yetone/avante.nvim/blob/main/lua/avante/config.lua
     -- cfg inspired by: https://github.com/gokhangeyik/dotfiles/blob/main/nvim/lua/plugins/avante.lua
@@ -20,9 +20,9 @@ return {
       ---@alias Mode "agentic" | "legacy"
       mode = "legacy",
       ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-      provider = "cp_claude_4",
-      cursor_applying_provider = "cp_claude_4",
-      auto_suggestions_provider = "cp_claude_4",
+      provider = "cp_gpt41",
+      cursor_applying_provider = "cp_gpt41",
+      auto_suggestions_provider = "cp_gpt41",
       behaviour = {
         auto_suggestions = false,
       },
