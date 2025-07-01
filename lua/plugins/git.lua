@@ -171,4 +171,22 @@ return {
       },
     },
   },
+  {
+    {
+      "FabijanZulj/blame.nvim",
+      -- lazy = false,
+      cmd = "BlameToggle",
+      -- From: https://github.com/FabijanZulj/blame.nvim?tab=readme-ov-file#configuration
+      opts = {
+        merge_consecutive = false,
+      },
+      keys = {
+        {
+          "<leader>gtt",
+          "<cmd>BlameToggle<cr>",
+          desc = "Toggle: Blame",
+        },
+      },
+    },
+  },
 }
