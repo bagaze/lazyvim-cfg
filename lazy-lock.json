@@ -1,5 +1,6 @@
 {
   "LazyVim": { "branch": "main", "commit": "25abbf546d564dc484cf903804661ba12de45507" },
+  "SchemaStore.nvim": { "branch": "main", "commit": "f4f08359ba81ef1f5e56480fd11687a5a946d19b" },
   "aerial.nvim": { "branch": "master", "commit": "5c0df1679bf7c814c924dc6646cc5291daca8363" },
   "auto-save.nvim": { "branch": "main", "commit": "5fbcaac0a2698c87a9a1bd2083cb6949505cca12" },
   "avante.nvim": { "branch": "main", "commit": "30eb77af045015c890094dc514cf49d06f830cbe" },
