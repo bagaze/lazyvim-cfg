@@ -1,54 +1,68 @@
-local lspconfig = require("lspconfig")
-
 return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      -- Useful for debugging formatter issues
-      format_notify = false,
-      inlay_hints = { enabled = false },
-      servers = {
-        bashls = {
-          filetypes = { "sh", "zsh" },
-        },
-        ruby_lsp = {
-          -- mason = false,
-          -- cmd = { "ruby-lsp" },
-          init_options = {
-            formatter = "auto",
+  "neovim/nvim-lspconfig",
+  opts = {
+    inlay_hints = { enabled = false },
+    servers = {
+      ansiblels = {
+        settings = {
+          ansible = {
+            validation = {
+              lint = {
+                -- this is also handled by prettier, and they don't quite agree
+                arguments = "--skip-list=yaml",
+              },
+            },
           },
         },
-        -- See: https://docs.rubocop.org/rubocop/usage/lsp.html
-        -- rubocop = {
-        --   mason = false,
-        --   cmd = { "bundle", "exec", "rubocop", "--lsp" },
-        --   root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
-        -- },
-        -- solargraph = {
-        --   mason = false,
-        --   -- cmd = { "bundle", "exec", "solargraph", "stdio" },
-        --   settings = {
-        --     autoformat = false,
-        --     formatting = false,
-        --     completion = true,
-        --     diagnostic = true,
-        --     folding = true,
-        --     references = true,
-        --     rename = true,
-        --     symbols = true,
-        --   },
-        -- },
-        -- sqlls = {},
-        -- terraformls = {},
-        -- tsserver = {},
-        -- yamlls = {},
       },
+      eslint = {},
+    },
+
+    -- a copy of LazyVim's setup function with one change (marked inline) to fix
+    -- auto-fixing on neovim 0.11.
+    setup = {
+      eslint = function()
+        local function get_client(buf)
+          return LazyVim.lsp.get_clients({ name = "eslint", bufnr = buf })[1]
+        end
+
+        local formatter = LazyVim.lsp.formatter({
+          name = "eslint: lsp",
+          primary = false,
+          priority = 200,
+          filter = "eslint",
+        })
+
+        -- Use EslintFixAll on Neovim < 0.10.0
+        -- Changed from upstream: check the version explicitly instead of
+        -- looking for `vim.lsp._require`. Seems like that check stopped working
+        -- with Neovim 0.11.
+        if vim.fn.has("nvim-0.10") == 0 then
+          formatter.name = "eslint: EslintFixAll"
+          formatter.sources = function(buf)
+            local client = get_client(buf)
+            return client and { "eslint" } or {}
+          end
+          formatter.format = function(buf)
+            local client = get_client(buf)
+            if client then
+              local pull_diagnostics =
+                vim.diagnostic.get(buf, { namespace = vim.lsp.diagnostic.get_namespace(client.id, false) })
+              -- Older versions of the ESLint language server send push
+              -- diagnostics rather than using pull. We support both for
+              -- backwards compatibility.
+              local push_diagnostics =
+                vim.diagnostic.get(buf, { namespace = vim.lsp.diagnostic.get_namespace(client.id, true) })
+              if (#pull_diagnostics + #push_diagnostics) > 0 then
+                vim.cmd("EslintFixAll")
+              end
+            end
+          end
+        end
+
+        -- register the formatter with LazyVim
+        LazyVim.format.register(formatter)
+      end,
     },
   },
-  -- {
-  --   "zeioth/garbage-day.nvim",
-  --   dependencies = "neovim/nvim-lspconfig",
-  --   event = "VeryLazy",
-  --   opts = {},
-  -- },
 }
