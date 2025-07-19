@@ -16,6 +16,16 @@ return {
         },
       },
       eslint = {},
+      -- Use local ruby_lsp and rubocop instead of mason's
+      -- From: https://github.com/mason-org/mason.nvim/issues/1777#issuecomment-3092418054
+      ruby_lsp = {
+        mason = false,
+        cmd = { vim.fn.expand("~/.local/share/mise/shims/ruby-lsp") },
+      },
+      rubocop = {
+        mason = false,
+        cmd = { vim.fn.expand("~/.local/share/mise/shims/rubocop"), "--lsp" },
+      },
     },
 
     -- a copy of LazyVim's setup function with one change (marked inline) to fix
