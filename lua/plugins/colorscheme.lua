@@ -164,18 +164,14 @@ return {
       style = "moon",
       transparent = false, -- Enable this to disable setting the background color
       on_colors = function(colors)
-        colors.comment = "#5872a4"
+        colors.comment = "#738BBD"
       end,
       on_highlights = function(hl, colors)
         hl.LineNr = { fg = colors.orange, bold = true }
         hl.CursorLineNr = { fg = colors.green, bold = true }
         hl.LineNrAbove = { fg = colors.orange }
         hl.LineNrBelow = { fg = colors.orange }
-        hl.Visual = { fg = colors.red, bg = colors.highlight_low }
-        hl.VisualNonText = { fg = colors.nontext, bg = colors.highlight_low }
-        hl.comment = { fg = colors.comment }
-        hl.perlComment = { fg = colors.comment }
-        hl.Comment = { fg = colors.comment }
+        hl.Visual = { fg = colors.red, bg = colors.bg_visual }
       end,
       styles = {
         -- Background styles. Can be "dark", "transparent" or "normal"

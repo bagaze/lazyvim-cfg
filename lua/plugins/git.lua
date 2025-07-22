@@ -11,12 +11,13 @@ return {
     -- or lazy = false. One of both options will work.
     opts = {
       enabled = true,
-      message_template = "  <author> • <date> • <summary> • <<sha>>",
+      message_template = "   <author> • <date> • <summary> • <<sha>>",
       date_format = "%r",
       virtual_text_column = 1,
       schedule_event = "CursorHold",
       clear_event = "CursorHoldI",
       delay = 150,
+      highlight_group = "Question",
     },
     keys = {
       {
