@@ -22,4 +22,15 @@ return {
       })
     end,
   },
+  {
+    "jinh0/eyeliner.nvim",
+    enabled = false,
+    opts = {
+      -- show highlights only after keypress
+      highlight_on_key = true,
+
+      -- dim all other characters if set to true (recommended!)
+      dim = false,
+    },
+  },
 }
