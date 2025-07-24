@@ -14,6 +14,10 @@ return {
         position = "float",
       },
     },
+    -- TODO: Re-enable this when snacks.nvim supports opencode @selection again
+    input = {
+      enabled = false,
+    },
     styles = {
       lazygit = {
         width = 0.96,
