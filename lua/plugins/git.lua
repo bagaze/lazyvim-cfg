@@ -85,8 +85,8 @@ return {
       },
       {
         "<leader>gdm",
-        "<cmd>DiffviewOpen origin/master<cr>",
-        desc = "Diffview: origin/master",
+        "<cmd>DiffviewOpen origin/main<cr>",
+        desc = "Diffview: origin/main",
       },
       {
         "<leader>gdb",
