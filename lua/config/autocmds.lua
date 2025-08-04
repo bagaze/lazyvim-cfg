@@ -64,9 +64,10 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- Disable autoformat for eruby (.erb) files
+-- Disable autoformat for eruby (.erb) and typescript files
+-- To find FileType use: `lua print(vim.bo.filetype)`
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "eruby" },
+  pattern = { "eruby", "typescriptreact", "typescript" },
   callback = function()
     vim.b.autoformat = false
   end,
