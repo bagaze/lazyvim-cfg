@@ -193,6 +193,7 @@ return {
   {
     "yetone/avante.nvim",
     event = "VeryLazy",
+    enabled = false,
     -- cmd = { "AvanteToggle" },
     -- lazy = true,
     version = false, -- set this if you want to always pull the latest change
