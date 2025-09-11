@@ -71,3 +71,5 @@ opt.pumblend = 0
 -- From: https://github.com/LazyVim/LazyVim/discussions/2150#discussioncomment-7787591
 -- force root_dir to be remain cwd
 vim.g.root_spec = { "cwd" }
+
+vim.o.statuscolumn = ""
