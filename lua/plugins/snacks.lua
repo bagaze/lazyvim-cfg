@@ -35,6 +35,22 @@ return {
         },
       },
       sources = {
+        buffers = {
+          layout = {
+            preset = "vscode_custom",
+          },
+          unloaded = true,
+          current = true,
+          sort_lastused = true,
+          win = {
+            input = {
+              keys = {
+                ["d"] = "bufdelete",
+              },
+            },
+            list = { keys = { ["d"] = "bufdelete" } },
+          },
+        },
         files = {
           layout = {
             preset = "vscode_custom",

@@ -11,6 +11,7 @@ return {
   },
   {
     "romgrk/barbar.nvim",
+    enabled = false,
     event = "VeryLazy",
     dependencies = { "ThePrimeagen/harpoon" },
     -- From: https://github.com/romgrk/barbar.nvim/issues/589
