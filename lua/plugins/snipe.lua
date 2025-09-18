@@ -1,6 +1,6 @@
 return {
   {
-    "leath-dub/snipe.nvim",
+    "bagaze/snipe.nvim",
     keys = {
       {
         "gb",
@@ -32,7 +32,7 @@ return {
         -- You can also just use normal navigation to go to the item you want
         -- this option just sets the keybind for selecting the item under the
         -- cursor
-        under_cursor = "L",
+        under_cursor = { "<CR>", "L" },
         -- In case you changed your mind, provide a keybind that lets you
         -- cancel the snipe and close the window.
         ---@type string|string[]
