@@ -16,7 +16,23 @@ return {
         },
       },
       eslint = {},
-      -- Use local ruby_lsp and rubocop instead of mason's
+      -- Use local ruby_lsp/solargraph and rubocop instead of mason's
+      -- From: https://github.com/ianchesal/dotfiles/blob/4314a33bac8b7d32133268f7db528e783b4c9f26/nvim/lua/plugins/nvim-lspconfig.lua#L32
+      solargraph = {
+        mason = false,
+        cmd = { vim.fn.expand("~/.local/share/mise/shims/solargraph"), "stdio" },
+        settings = {
+          solargraph = {
+            autoformat = true,
+            completion = true,
+            diagnostics = true,
+            folding = true,
+            references = true,
+            rename = true,
+            symbols = true,
+          },
+        },
+      },
       -- From: https://github.com/mason-org/mason.nvim/issues/1777#issuecomment-3092418054
       ruby_lsp = {
         mason = false,
