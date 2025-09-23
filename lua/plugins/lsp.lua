@@ -18,6 +18,10 @@ return {
       eslint = {},
       -- Use local ruby_lsp and rubocop instead of mason's
       -- From: https://github.com/mason-org/mason.nvim/issues/1777#issuecomment-3092418054
+      solargraph = {
+        mason = false,
+        cmd = { vim.fn.expand("~/.local/share/mise/shims/solargraph"), "stdio" },
+      },
       ruby_lsp = {
         mason = false,
         cmd = { vim.fn.expand("~/.local/share/mise/shims/ruby-lsp") },
