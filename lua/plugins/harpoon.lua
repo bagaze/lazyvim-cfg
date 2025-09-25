@@ -11,4 +11,12 @@ return {
       desc = "Harpoon File",
     },
   },
+  {
+    "letieu/harpoon-lualine",
+    dependencies = {
+      {
+        "ThePrimeagen/harpoon",
+      },
+    },
+  },
 }
