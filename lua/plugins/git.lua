@@ -88,21 +88,21 @@ return {
         "<cmd>DiffviewOpen origin/main<cr>",
         desc = "Diffview: origin/main",
       },
-      {
-        "<leader>gdb",
-        "<cmd>DiffviewOpen origin/HEAD...HEAD --imply-local<cr>",
-        desc = "Diffview: base branch",
-      },
+      -- {
+      --   "<leader>gdb",
+      --   "<cmd>DiffviewOpen origin/HEAD...HEAD --imply-local<cr>",
+      --   desc = "Diffview: base branch",
+      -- },
       {
         "<leader>gdf",
         "<cmd>DiffviewFileHistory --range=origin/HEAD...HEAD --right-only --no-merges<cr>",
         desc = "Diffview: compare individual commits",
       },
-      {
-        "<leader>gdc",
-        "<cmd>DiffviewClose<cr>",
-        desc = "Diffview: close",
-      },
+      -- {
+      --   "<leader>gdc",
+      --   "<cmd>DiffviewClose<cr>",
+      --   desc = "Diffview: close",
+      -- },
     },
     config = function(_, opts)
       require("diffview").setup(opts)
@@ -193,5 +193,17 @@ return {
   {
     "esmuellert/vscode-diff.nvim",
     dependencies = { "MunifTanjim/nui.nvim" },
+    keys = {
+      {
+        "<leader>gdb",
+        "<cmd>CodeDiff main...<cr>",
+        desc = "CodeDiff: base branch",
+      },
+      {
+        "<leader>gdc",
+        "<cmd>CodeDiff close<cr>",
+        desc = "CodeDiff: close",
+      },
+    },
   },
 }
