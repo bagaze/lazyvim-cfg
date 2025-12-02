@@ -17,7 +17,7 @@ return {
       schedule_event = "CursorHold",
       clear_event = "CursorHoldI",
       delay = 150,
-      highlight_group = "Question",
+      -- highlight_group = "Question",
     },
     keys = {
       {
