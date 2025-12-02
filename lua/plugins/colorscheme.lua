@@ -134,17 +134,18 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    lazy = true,
-    -- lazy = false,
-    -- priority = 1000,
-    -- opts = function()
-    --   return {
-    --     -- styles = { transparency = true },
-    --     highlight_groups = {
-    --       Visual = { fg = "#FF5DA9", bg = "#FFFFFF" },
-    --     },
-    --   }
-    -- end,
+    -- lazy = true,
+    lazy = false,
+    priority = 1000,
+    opts = function()
+      return {
+        -- styles = { transparency = true },
+        highlight_groups = {
+          Visual = { fg = "#FF5DA9", bg = "#FFFFFF" },
+          CursorLineNr = { fg = "love", bold = true },
+        },
+      }
+    end,
   },
   {
     "catppuccin/nvim",
@@ -158,8 +159,9 @@ return {
   },
   {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    lazy = true,
+    -- priority = 1000,
     opts = {
       style = "moon",
       transparent = false, -- Enable this to disable setting the background color
@@ -185,8 +187,8 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "catppuccin-frappe",
-      -- colorscheme = "rose-pine-moon",
-      colorscheme = "tokyonight",
+      colorscheme = "rose-pine-moon",
+      -- colorscheme = "tokyonight",
     },
   },
 }
