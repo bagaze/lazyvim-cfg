@@ -49,6 +49,38 @@ return {
         mason = false,
         cmd = { vim.fn.expand("~/.local/share/mise/shims/rubocop"), "--lsp" },
       },
+      -- From: https://www.lazyvim.org/extras/lang/python#nvim-lspconfig
+      ruff = {
+        cmd_env = { RUFF_TRACE = "messages" },
+        init_options = {
+          settings = {
+            logLevel = "error",
+          },
+        },
+        keys = {
+          {
+            "<leader>co",
+            LazyVim.lsp.action["source.organizeImports"],
+            desc = "Organize Imports",
+          },
+        },
+      },
+      basedpyright = {
+        -- From: https://docs.basedpyright.com/latest/configuration/language-server-settings/
+        settings = {
+          basedpyright = {
+            disableOrganizeImports = true,
+            analysis = {
+              -- ignore = { "*" }, --usually used to ignore specific files or folders, can be used for all
+              typeCheckingMode = "standard", -- ["off", "basic", "standard", "strict", "recommended", "all"] - set this to "off" (or one of the other 4 levels of strictness) if you don't want it to type check, can also uncomment the above ignore = {"*"} line for only LSP feats
+              diagnosticMode = "openFilesOnly", -- "openFilesOnly" or "workspace"
+              useLibraryCodeForTypes = true,
+              autoImportCompletions = true,
+              autoSearchPaths = true,
+            },
+          },
+        },
+      },
     },
 
     -- a copy of LazyVim's setup function with one change (marked inline) to fix
