@@ -2,6 +2,7 @@ return {
   {
     -- git blame plugin
     "f-person/git-blame.nvim",
+    branch = "main",
     -- dir = "~/git-blame.nvim",
     -- load the plugin at startup
     event = "VeryLazy",
