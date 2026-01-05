@@ -82,6 +82,9 @@ return {
           },
         },
       },
+      jinja_lsp = {
+        filetypes = { "jinja" },
+      },
     },
 
     -- a copy of LazyVim's setup function with one change (marked inline) to fix
