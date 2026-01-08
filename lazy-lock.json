@@ -11,6 +11,7 @@
   "blink.cmp": { "branch": "main", "commit": "b19413d214068f316c78978b08264ed1c41830ec" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "catppuccin": { "branch": "main", "commit": "6efc53e42cfc97700f19043105bf73ba83c4ae7d" },
+  "codediff.nvim": { "branch": "main", "commit": "5ee6efd833177b1e608e3a4fc847169dd2ae73d4" },
   "conform.nvim": { "branch": "master", "commit": "8314f4c9e205e7f30b62147069729f9a1227d8bf" },
   "copilot.lua": { "branch": "master", "commit": "e78d1ffebdf6ccb6fd8be4e6898030c1cf5f9b64" },
   "csvview.nvim": { "branch": "main", "commit": "da4106db5c44bfdccd0f76142c0f2740bcae8e5c" },
@@ -82,7 +83,6 @@
   "vim-dadbod-ui": { "branch": "master", "commit": "48c4f271da13d380592f4907e2d1d5558044e4e5" },
   "vim-visual-multi": { "branch": "master", "commit": "a6975e7c1ee157615bbc80fc25e4392f71c344d4" },
   "visual-whitespace.nvim": { "branch": "main", "commit": "2c2de32bb97620bcf4b3b78879c185315ee971dc" },
-  "vscode-diff.nvim": { "branch": "main", "commit": "5ee6efd833177b1e608e3a4fc847169dd2ae73d4" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "yanky.nvim": { "branch": "main", "commit": "04fc42b94305d94948c9c197f679336668af3292" },
   "yazi.nvim": { "branch": "main", "commit": "7c2a2c3511f8790b8de749a04d37563d77478c17" }
