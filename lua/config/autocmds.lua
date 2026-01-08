@@ -81,3 +81,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 --     vim.fn.setreg("+", vim.fn.getreg("0"))
 --   end,
 -- })
+
+-- Reset cursor style to default on exit
+vim.api.nvim_create_autocmd("VimLeave", {
+  desc = "Reset cursor style to default on exit",
+  callback = function()
+    vim.opt.guicursor = ""
+    vim.cmd([[set guicursor=a:ver25]])
+  end,
+})
