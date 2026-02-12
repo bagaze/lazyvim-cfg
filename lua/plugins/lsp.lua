@@ -51,7 +51,6 @@ return {
       },
       -- From: https://www.lazyvim.org/extras/lang/python#nvim-lspconfig
       ruff = {
-        mason = false,
         cmd_env = { RUFF_TRACE = "messages" },
         init_options = {
           settings = {
