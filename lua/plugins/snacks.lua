@@ -24,6 +24,7 @@ return {
       },
     },
     picker = {
+      hidden = true,
       ---@class snacks.picker.formatters.Config
       exclude = { -- add folder names here to exclude
         "node_modules",
@@ -36,6 +37,7 @@ return {
       },
       sources = {
         buffers = {
+          hidden = true,
           layout = {
             preset = "vscode_custom",
           },
@@ -52,6 +54,7 @@ return {
           },
         },
         files = {
+          hidden = true,
           layout = {
             preset = "vscode_custom",
           },
