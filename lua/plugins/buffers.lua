@@ -9,16 +9,15 @@ vim.api.nvim_create_autocmd("FileType", {
 return {
   {
     "mistweaverco/bafa.nvim",
+    enabled = false,
     keys = {
-      "gb",
-      function()
-        require("bafa").toggle({
-          -- Show jump-labels when opening the UI
-          -- defaults to false|nil
-          with_jump_labels = true,
-        })
-      end,
-      desc = "Open Snipe buffer menu",
+      {
+        "gb",
+        function()
+          require("bafa").toggle()
+        end,
+        desc = "Open Snipe buffer menu",
+      },
     },
     opts = {
       ui = {
@@ -56,7 +55,6 @@ return {
   },
   {
     "leath-dub/snipe.nvim",
-    enabled = false,
     keys = {
       {
         "gb",
