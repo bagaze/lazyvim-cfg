@@ -1,6 +1,62 @@
+vim.api.nvim_create_autocmd("FileType", {
+  group = vim.api.nvim_create_augroup("userautocmd-bafa", { clear = true }),
+  pattern = "bafa",
+  callback = function()
+    vim.keymap.set("n", "l", "<CR>", { remap = true, buffer = true, desc = "Select" })
+  end,
+})
+
 return {
   {
+    "mistweaverco/bafa.nvim",
+    keys = {
+      "gb",
+      function()
+        require("bafa").toggle({
+          -- Show jump-labels when opening the UI
+          -- defaults to false|nil
+          with_jump_labels = true,
+        })
+      end,
+      desc = "Open Snipe buffer menu",
+    },
+    opts = {
+      ui = {
+        jump_labels = {
+          -- Keys to use for jump-labels
+          -- they are reserved and because `l` is in the defaults, we need
+          -- to supply a table without the reserved `l` key
+          keys = {
+            "a",
+            "s",
+            "d",
+            "f",
+            "j",
+            "k",
+            ";",
+            "q",
+            "w",
+            "e",
+            "r",
+            "u",
+            "i",
+            "o",
+            "p",
+            "z",
+            "x",
+            "c",
+            "n",
+            "m",
+            ",",
+            ".",
+          },
+        },
+      },
+    },
+  },
+  {
     "leath-dub/snipe.nvim",
+    enabled = false,
     keys = {
       {
         "gb",
