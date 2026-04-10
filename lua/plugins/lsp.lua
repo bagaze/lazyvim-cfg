@@ -66,6 +66,17 @@ return {
         },
       },
       basedpyright = {
+        -- From: https://www.reddit.com/r/neovim/comments/1qw9cmt/comment/o3pd9uj/
+        handlers = {
+          --- filter noisy notifications
+          ["$/progress"] = function(err, result, ctx)
+            -- just notify once
+            if result.token == (vim.g.basedpyright_progress_token or result.token) then
+              vim.g.basedpyright_progress_token = result.token
+              vim.lsp.handlers["$/progress"](err, result, ctx)
+            end
+          end,
+        },
         -- From: https://docs.basedpyright.com/latest/configuration/language-server-settings/
         settings = {
           basedpyright = {
