@@ -13,6 +13,7 @@
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
   "catppuccin": { "branch": "main", "commit": "426dbebe06b5c69fd846ceb17b42e12f890aedf1" },
   "codediff.nvim": { "branch": "main", "commit": "832f1ecc5f8b15a44cf7537e31d3266d657775b1" },
+  "colorful-winsep.nvim": { "branch": "main", "commit": "84432d9966fafaa08dd9040c98b0011045d8e964" },
   "conform.nvim": { "branch": "master", "commit": "086a40dc7ed8242c03be9f47fbcee68699cc2395" },
   "copilot.lua": { "branch": "master", "commit": "ad7e729e9a6348f7da482be0271d452dbc4c8e2c" },
   "csvview.nvim": { "branch": "main", "commit": "7022e18a0fbae9aecf99a3ba02b2a541edc2b8a1" },
